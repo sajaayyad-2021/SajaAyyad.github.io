@@ -1,5 +1,5 @@
 
-# ✨ Saja Y Ayyad - Palestinian Computer Engineering 
+# ✨ Saja Y Ayyad - Computer Engineering 
 👩‍💻 Computer Engineering Student | 💻 Software Developer | 🔧 Tech Innovator
 
 [Email](mailto:sajayaser085@gmail.com) | [LinkedIn](https://www.linkedin.com/in/saja-ayyad-66b727333/) | [GitHub](https://github.com/your-username)
@@ -8,7 +8,8 @@
 
 ### 🎓 Education
 **Birzeit University** — B.S. in Computer Engineering (Sep 2021 - Present)  
-Key Courses: Computer Architecture, Digital Integrated Circuits, Advanced Digital Design
+Key Modules:  Data Structures and Algorithms, Database Systems, Object-Oriented Programming (OOP) Computer
+ Architecture and Advanced Digital,Machine Learning,Project Management, Artificial Intelligence,Computer Architecture, Digital Integrated Circuits, Advanced Digital Design
 
 ---
 ### 💻 Skills & Expertise
