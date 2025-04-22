@@ -1,4 +1,4 @@
-# SajaAyyad.github.io
+
 # ✨ Saja Y Ayyad - Palestinian Computer Engineering 
 👩‍💻 Computer Engineering Student | 💻 Software Developer | 🔧 Tech Innovator
 
