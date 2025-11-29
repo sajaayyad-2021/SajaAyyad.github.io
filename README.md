@@ -1,49 +1,176 @@
+# Hi there, I'm Saja Yaser Ayyad 👋
 
-# ✨ Saja Y Ayyad - Computer Engineering 
-👩‍💻 Computer Engineering Student | 💻 Software Developer | 🔧 Tech Innovator
+<div align="center">
+  
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/saja-ayyad-66b727333/)
+  [![Email](https://img.shields.io/badge/Email-Contact-red?style=for-the-badge&logo=gmail)](mailto:sajayaser085@gmail.com)
+  [![GitHub](https://img.shields.io/badge/GitHub-Follow-black?style=for-the-badge&logo=github)](https://github.com/your-username)
 
-[Email](mailto:sajayaser085@gmail.com) | [LinkedIn](https://www.linkedin.com/in/saja-ayyad-66b727333/) | [GitHub](https://github.com/your-username)
+</div>
 
----
+## 💫 About Me
 
-### 🎓 Education
-**Birzeit University** — B.S. in Computer Engineering (Sep 2021 - Present)  
-Key Modules:  Data Structures and Algorithms, Database Systems, Object-Oriented Programming (OOP) Computer
- Architecture and Advanced Digital,Machine Learning,Project Management, Artificial Intelligence,Computer Architecture, Digital Integrated Circuits, Advanced Digital Design
+```python
+class SajaAyyad:
+    def __init__(self):
+        self.role = "Computer Systems Engineering Student"
+        self.location = "Ramallah, Palestine 🇵🇸"
+        self.university = "Birzeit University"
+        self.interests = ["Quality Assurance", "Software Development", "Problem Solving"]
+        self.current_focus = ["React.js", "Flutter", "Full-Stack Development"]
+        
+    def say_hi(self):
+        print("Thanks for dropping by! Let's build something amazing together.")
 
----
-### 💻 Skills & Expertise
-| **Area**            | **Skills**                                                    |
-|---------------------|---------------------------------------------------------------|
-| **Programming**      | MIPS Assembly, C, Bash, Java, HTML & CSS                      |
-| **Hardware Design**  | Digital Circuit Simulation, System Verilog                    |
-| **Web Development**  | Responsive Design, Frontend Basics, Front-End Development     |
-| **Mobile Development**| Currently learning mobile development                        |
-| **Data Structures**  | Sorting, Hashing, Trees                                       |
-| **Problem Solving**  | Analytical Thinking, Optimization                             |
----
+me = SajaAyyad()
+me.say_hi()
+```
 
-### 💼 Experience
-- **🌐 Personal Website**: Developed a responsive site for Nadia Jewelry using HTML & CSS (2025 - Present)
-- **⚡ Carry Look-Ahead Adder Design**: Optimized CLA using Electric EDA (Nov 2024 - Jan 2025)
-- **🧠 MIPS Processor Design**: Simulated a 5-stage processor ensuring accuracy (Dec 2024 - Jan 2025)
-- **📂 MIPS Linear Solver**: Implemented a file-based linear equation solver (Oct 2024 - Nov 2024)
-- **💉 Medical Test Management**: Bash script for medical test records (Aug 2024)
+I'm a passionate **Computer Systems Engineering student** with a strong foundation in software development, databases, and quality assurance. I love turning complex problems into elegant solutions and ensuring software reliability through rigorous testing.
 
 ---
 
-### 🌐 Languages
-- **Arabic**: Native 🇵🇸
-- **English**: B1 (Professional Working Proficiency) 🇺🇸
+## 🚀 Tech Stack
+
+### Languages
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=openjdk&logoColor=white)
+![C](https://img.shields.io/badge/C-00599C?style=flat&logo=c&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat&logo=mysql&logoColor=white)
+![MIPS Assembly](https://img.shields.io/badge/MIPS-Assembly-green?style=flat)
+![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat&logo=gnu-bash&logoColor=white)
+
+### Web & Mobile Development
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB)
+![Flask](https://img.shields.io/badge/Flask-000000?style=flat&logo=flask&logoColor=white)
+![Flutter](https://img.shields.io/badge/Flutter-02569B?style=flat&logo=flutter&logoColor=white)
+
+### Tools & Technologies
+![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black)
+![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=flat&logo=visual-studio-code&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white)
+![Arduino](https://img.shields.io/badge/Arduino-00979D?style=flat&logo=arduino&logoColor=white)
 
 ---
 
-### 🛠️ Languages & Tools
-MIPS Assembly | C Programming | java | Bash Scripting | HTML & CSS | System Verilog | Git & Linux
+## 🎯 Featured Projects
+
+### 🦷 [Dental Clinic Management System](LINK_HERE)
+**Full-Stack Web Application** | `Flask` `MySQL` `HTML/CSS` `JavaScript`
+
+A comprehensive database-driven web application for managing dental clinic operations.
+- ✅ Patient record management with secure data handling
+- ✅ Appointment scheduling and tracking system
+- ✅ Treatment history and medical records integration
+- ✅ User-friendly interface with focus on data accuracy
+
+### 🧬 [Medical Test Management System](LINK_HERE)
+**Python Application** | `Python` `Data Validation` `Testing`
+
+Robust system for organizing and managing patient test results with quality assurance focus.
+- ✅ Data integrity validation and error detection
+- ✅ Performance optimization through efficient algorithms
+- ✅ Comprehensive testing scenarios for reliability
+- ✅ Clean architecture with modular design
+
+### 🏭 [Job Shop Scheduling Optimizer](LINK_HERE)
+**Genetic Algorithm Implementation** | `Java` `Optimization` `Performance Testing`
+
+Intelligent scheduling system using genetic algorithms to optimize manufacturing processes.
+- ✅ Reduced overall processing time through smart scheduling
+- ✅ Performance validation with documented test results
+- ✅ Scalable solution for complex scheduling problems
+
+### 🔢 [Data Structure Implementations](LINK_HERE)
+**Algorithm & Data Structure Projects** | `Java` `C` `Performance Testing`
+
+Collection of advanced data structure implementations with real-world applications:
+- **Radix Sort Engine**: Lexicographical ordering using doubly linked lists
+- **Binary Expression Evaluator**: BST-based mathematical expression parser
+- **Dictionary Management System**: Hash-based dictionary with collision handling
+
+### 💻 [MIPS Processor Design](LINK_HERE)
+**Hardware Simulation** | `MIPS Assembly` `System Design` `Digital Circuits`
+
+5-stage pipelined processor simulation with full accuracy verification.
+
+### ⚡ [Carry Look-Ahead Adder](LINK_HERE)
+**Digital Design** | `Electric EDA` `Hardware Optimization`
+
+Optimized CLA design using Electric EDA for high-performance arithmetic operations.
 
 ---
 
-### 💬 Let's Connect!
-I'm passionate about technology, problem-solving, and collaboration! Feel free to reach out or connect on LinkedIn.
+## 📊 GitHub Stats
 
-> “Code is like humor. When you have to explain it, it’s bad.” — Cory House
+<div align="center">
+  
+  ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=YOUR_USERNAME&show_icons=true&theme=radical)
+  
+  ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_USERNAME&layout=compact&theme=radical)
+  
+  ![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=YOUR_USERNAME&theme=radical)
+
+</div>
+
+---
+
+## 🎓 Education & Certifications
+
+**Birzeit University** — B.A. in Computer Systems Engineering (2021 - Present)
+
+**Recent Certifications:**
+- 🎯 Flutter Development Course — Udemy (55 hours)
+- 💻 JavaScript Bootcamp — GDG with Gaza Sky Geeks (20 hours)
+- 🎨 Front-End Development — Hope International Academy (40 hours)
+- 📚 Git & GitHub Workshop — Microsoft Learn Student Ambassadors
+- 🐧 Linux Bootcamp — GDG Birzeit University (18 hours)
+
+---
+
+## 🌱 Currently Learning
+
+- Advanced **React.js** patterns and state management
+- **Flutter** mobile app development
+- Modern **DevOps** practices and CI/CD
+- Advanced **Quality Assurance** methodologies
+
+---
+
+## 💪 Core Competencies
+
+```
+🎯 Quality Assurance      🤝 Team Collaboration       🧠 Critical Thinking
+📊 Data Analysis          🗣️ Presentation Skills      ⚡ Problem Solving
+🎨 UI/UX Focus           📚 Documentation            ⏱️ Time Management
+```
+
+---
+
+## 📫 Let's Connect!
+
+I'm always excited to collaborate on interesting projects or discuss technology! Feel free to reach out:
+
+- 📧 Email: [sajayaser085@gmail.com](mailto:sajayaser085@gmail.com)
+- 💼 LinkedIn: [linkedin.com/in/saja-ayyad-66b727333](https://www.linkedin.com/in/saja-ayyad-66b727333/)
+- 🌐 Location: Ramallah, Palestine
+- 📱 Phone: +972 593073706
+
+---
+
+<div align="center">
+
+### 💭 Quote I Live By
+
+*"Code is like humor. When you have to explain it, it's bad."* — Cory House
+
+---
+
+⭐️ From [Saja Yaser Ayyad](YOUR_GITHUB_URL) | Made with ❤️ in Palestine 🇵🇸
+
+</div>
