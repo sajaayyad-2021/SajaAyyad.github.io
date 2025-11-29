@@ -118,7 +118,7 @@ Optimized CLA design using Electric EDA for high-performance arithmetic operatio
 ## 💪 Core Competencies
 
 ```
-🎯 Quality Assurance      🤝 Team Collaboration       🧠 Critical Thinking
+    🤝 Team Collaboration       🧠 Critical Thinking
 📊 Data Analysis          🗣️ Presentation Skills      ⚡ Problem Solving          📚 Documentation            ⏱️ Time Management
 ```
 
