@@ -24,7 +24,7 @@ I'm a **Computer Systems Engineering student** .
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
 ![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat&logo=mysql&logoColor=white)
 ![MIPS Assembly](https://img.shields.io/badge/MIPS-Assembly-green?style=flat)
-![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat&logo=gnu-bash&logoColor=white)
+
 
 ### Web & Mobile Development
 
