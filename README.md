@@ -4,16 +4,14 @@
   
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/saja-ayyad-66b727333/)
   [![Email](https://img.shields.io/badge/Email-Contact-red?style=for-the-badge&logo=gmail)](mailto:sajayaser085@gmail.com)
-  [![GitHub](https://img.shields.io/badge/GitHub-Follow-black?style=for-the-badge&logo=github)](https://github.com/your-username)
+  [![GitHub](https://img.shields.io/badge/GitHub-Follow-black?style=for-the-badge&logo=github)](https://github.com/SajaYaser)
 
 </div>
 
 ## 💫 About Me
 
 
-```
-
-I'm a passionate **Computer Systems Engineering student** with a strong foundation in software development, databases, and quality assurance. I love turning complex problems into elegant solutions and ensuring software reliability through rigorous testing.
+I'm a **Computer Systems Engineering student** .
 
 ---
 
@@ -93,6 +91,8 @@ Optimized CLA design using Electric EDA for high-performance arithmetic operatio
 
 
 
+---
+
 ## 🎓 Education & Certifications
 
 **Birzeit University** — B.A. in Computer Systems Engineering (2021 - Present)
@@ -119,8 +119,7 @@ Optimized CLA design using Electric EDA for high-performance arithmetic operatio
 
 ```
 🎯 Quality Assurance      🤝 Team Collaboration       🧠 Critical Thinking
-📊 Data Analysis          🗣️ Presentation Skills      ⚡ Problem Solving
-🎨 UI/UX Focus           📚 Documentation            ⏱️ Time Management
+📊 Data Analysis          🗣️ Presentation Skills      ⚡ Problem Solving          📚 Documentation            ⏱️ Time Management
 ```
 
 ---
@@ -144,6 +143,6 @@ I'm always excited to collaborate on interesting projects or discuss technology!
 
 ---
 
-⭐️ From [Saja Yaser Ayyad](YOUR_GITHUB_URL) | Made with ❤️ in Palestine 🇵🇸
+⭐️ From [Saja Yaser Ayyad](https://github.com/SajaYaser) | Made with ❤️ in Palestine 🇵🇸
 
 </div>
