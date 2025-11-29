@@ -10,20 +10,7 @@
 
 ## 💫 About Me
 
-```python
-class SajaAyyad:
-    def __init__(self):
-        self.role = "Computer Systems Engineering Student"
-        self.location = "Ramallah, Palestine 🇵🇸"
-        self.university = "Birzeit University"
-        self.interests = ["Quality Assurance", "Software Development", "Problem Solving"]
-        self.current_focus = ["React.js", "Flutter", "Full-Stack Development"]
-        
-    def say_hi(self):
-        print("Thanks for dropping by! Let's build something amazing together.")
 
-me = SajaAyyad()
-me.say_hi()
 ```
 
 I'm a passionate **Computer Systems Engineering student** with a strong foundation in software development, databases, and quality assurance. I love turning complex problems into elegant solutions and ensuring software reliability through rigorous testing.
@@ -42,9 +29,7 @@ I'm a passionate **Computer Systems Engineering student** with a strong foundati
 ![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat&logo=gnu-bash&logoColor=white)
 
 ### Web & Mobile Development
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
-![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB)
+
 ![Flask](https://img.shields.io/badge/Flask-000000?style=flat&logo=flask&logoColor=white)
 ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=flat&logo=flutter&logoColor=white)
 
@@ -106,19 +91,7 @@ Optimized CLA design using Electric EDA for high-performance arithmetic operatio
 
 ---
 
-## 📊 GitHub Stats
 
-<div align="center">
-  
-  ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=YOUR_USERNAME&show_icons=true&theme=radical)
-  
-  ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_USERNAME&layout=compact&theme=radical)
-  
-  ![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=YOUR_USERNAME&theme=radical)
-
-</div>
-
----
 
 ## 🎓 Education & Certifications
 
