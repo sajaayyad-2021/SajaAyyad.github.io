@@ -110,7 +110,6 @@ Optimized CLA design using Electric EDA for high-performance arithmetic operatio
 
 - Advanced **React.js** patterns and state management
 - **Flutter** mobile app development
-- Modern **DevOps** practices and CI/CD
 - Advanced **Quality Assurance** methodologies
 
 ---
