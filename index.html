@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Saja Ayyad</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600;700;800&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     * {
       margin: 0;
@@ -12,15 +13,15 @@
       box-sizing: border-box;
     }
     :root {
-      --primary: #6b8e23;
-      --primary-dark: #556b2f;
-      --secondary: #1c2704;
+      --primary: #b19cd9;
+      --primary-dark: #8b5fbf;
+      --secondary: #462b68;
       --dark: #f5f3f0;
       --dark-light: #ede6dd;
       --text: #2d2d2d;
       --text-muted: #5a5a5a;
-      --accent: #8b9d5f;
-      --success: #10b981;
+      --accent: #5f4b70;
+      --success: #797c7b;
       --gradient: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
     }
     body {
@@ -44,7 +45,7 @@
       position: absolute;
       width: 500px;
       height: 500px;
-      background: radial-gradient(circle, rgba(107, 142, 35, 0.08) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(177, 156, 217, 0.08) 0%, transparent 70%);
       top: -250px;
       right: -250px;
       animation: float 20s ease-in-out infinite;
@@ -54,7 +55,7 @@
       position: absolute;
       width: 400px;
       height: 400px;
-      background: radial-gradient(circle, rgba(154, 205, 50, 0.08) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(177, 156, 217, 0.08) 0%, transparent 70%);
       bottom: -200px;
       left: -200px;
       animation: float 15s ease-in-out infinite reverse;
@@ -70,12 +71,12 @@
       background: rgba(245, 243, 240, 0.8);
       backdrop-filter: blur(10px);
       z-index: 1000;
-      border-bottom: 1px solid rgba(107, 142, 35, 0.1);
+      border-bottom: 1px solid rgba(177, 156, 217, 0.1);
       transition: all 0.3s;
     }
     header.scrolled {
       background: rgba(245, 243, 240, 0.95);
-      box-shadow: 0 4px 30px rgba(107, 142, 35, 0.1);
+      box-shadow: 0 4px 30px rgba(177, 156, 217, 0.1);
     }
     nav {
       max-width: 1200px;
@@ -87,8 +88,7 @@
     }
     .logo {
       font-size: 2rem;
-      font-weight: 700;
-      font-style: italic;
+      font-weight: 800;
       font-family: 'Playfair Display', serif;
       background: var(--gradient);
       -webkit-background-clip: text;
@@ -144,7 +144,6 @@
       font-size: 4rem;
       font-weight: 800;
       font-family: 'Playfair Display', serif;
-      font-style: italic;
       line-height: 1.1;
       margin-bottom: 1rem;
       background: var(--gradient);
@@ -166,12 +165,12 @@
     }
     .hero-text .subtitle {
       font-size: 1.5rem;
-      font-style: italic;
-      font-family: 'Playfair Display', serif;
+      font-family: 'Merriweather', serif;
       color: var(--text-muted);
       margin-bottom: 2rem;
       animation: slideInLeft 1s ease 0.2s backwards;
       letter-spacing: -0.5px;
+      font-weight: 400;
     }
     .hero-text .tagline {
       font-size: 1.1rem;
@@ -204,11 +203,11 @@
     .btn-primary {
       background: var(--gradient);
       color: white;
-      box-shadow: 0 4px 15px rgba(107, 142, 35, 0.3);
+      box-shadow: 0 4px 15px  rgba(84, 48, 150, 0.3);
     }
     .btn-primary:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 25px rgba(107, 142, 35, 0.4);
+      box-shadow: 0 6px 25px rgba(145, 127, 180, 0.4);
     }
     .btn-secondary {
       background: transparent;
@@ -216,13 +215,13 @@
       border: 2px solid var(--primary);
     }
     .btn-secondary:hover {
-      background: rgba(107, 142, 35, 0.1);
+      background: rgba(177, 156, 217, 0.1);
       transform: translateY(-2px);
     }
     .hero-image {
-  display: flex;
-  justify-content: flex-end;
- }
+      display: flex;
+      justify-content: flex-end;
+    }
     @keyframes slideInRight {
       from {
         opacity: 0;
@@ -260,7 +259,7 @@
       border-radius: 50%;
       object-fit: cover;
       border: 4px solid var(--dark);
-      box-shadow: 0 20px 60px rgba(107, 142, 35, 0.2);
+      box-shadow: 0 20px 60px rgba(61, 53, 75, 0.2);
     }
     .stats {
       display: grid;
@@ -269,10 +268,10 @@
       margin-top: 3rem;
     }
     .stat-card {
-      background: rgba(107, 142, 35, 0.05);
+      background: rgba(177, 156, 217, 0.05);
       padding: 1.5rem;
       border-radius: 16px;
-      border: 1px solid rgba(107, 142, 35, 0.2);
+      border: 1px solid rgba(177, 156, 217, 0.2);
       text-align: center;
       transition: all 0.3s;
       animation: scaleUp 0.6s ease backwards;
@@ -291,7 +290,7 @@
       }
     }
     .stat-card:hover {
-      background: rgba(107, 142, 35, 0.1);
+      background: rgba(177, 156, 217, 0.1);
       transform: translateY(-5px);
       border-color: var(--primary);
     }
@@ -316,7 +315,6 @@
       font-size: 3rem;
       font-weight: 800;
       font-family: 'Playfair Display', serif;
-      font-style: italic;
       text-align: center;
       margin-bottom: 3rem;
       background: var(--gradient);
@@ -335,6 +333,7 @@
       font-size: 1.1rem;
       line-height: 1.8;
       color: var(--text-muted);
+      font-family: 'Merriweather', serif;
     }
     .about-text strong {
       color: var(--text);
@@ -344,14 +343,14 @@
       gap: 1rem;
     }
     .skill-category {
-      background: rgba(107, 142, 35, 0.08);
+      background: rgba(177, 156, 217, 0.08);
       padding: 1.5rem;
       border-radius: 12px;
-      border: 1px solid rgba(107, 142, 35, 0.2);
+      border: 1px solid rgba(177, 156, 217, 0.2);
       transition: all 0.3s;
     }
     .skill-category:hover {
-      background: rgba(107, 142, 35, 0.12);
+      background: rgba(177, 156, 217, 0.12);
       border-color: var(--primary);
       transform: translateX(5px);
     }
@@ -370,10 +369,10 @@
       margin-bottom: 4rem;
     }
     .project-card {
-      background: rgba(107, 142, 35, 0.05);
+      background: rgba(177, 156, 217, 0.05);
       border-radius: 16px;
       overflow: hidden;
-      border: 1px solid rgba(107, 142, 35, 0.2);
+      border: 1px solid rgba(177, 156, 217, 0.2);
       transition: all 0.3s;
       cursor: pointer;
       display: flex;
@@ -382,7 +381,7 @@
     }
     .project-card:hover {
       transform: translateY(-15px);
-      box-shadow: 0 25px 50px rgba(107, 142, 35, 0.2);
+      box-shadow: 0 25px 50px rgba(177, 156, 217, 0.2);
       border-color: var(--primary);
     }
     .project-image {
@@ -442,16 +441,16 @@
     }
     .tag {
       padding: 0.4rem 1rem;
-      background: rgba(107, 142, 35, 0.2);
+      background: rgba(177, 156, 217, 0.2);
       border-radius: 20px;
       font-size: 0.8rem;
       color: var(--primary);
       font-weight: 500;
-      border: 1px solid rgba(107, 142, 35, 0.3);
+      border: 1px solid rgba(177, 156, 217, 0.3);
       transition: all 0.3s ease;
     }
     .tag:hover {
-      background: rgba(107, 142, 35, 0.4);
+      background: rgba(177, 156, 217, 0.4);
       transform: translateY(-2px);
     }
     .project-link {
@@ -473,11 +472,11 @@
     .featured-projects {
       margin-top: 3rem;
       padding-top: 3rem;
-      border-top: 2px solid rgba(107, 142, 35, 0.2);
+      border-top: 2px solid rgba(177, 156, 217, 0.2);
     }
     .frontend-section {
-      background: rgba(107, 142, 35, 0.03);
-      border: 1px solid rgba(107, 142, 35, 0.15);
+      background: rgba(177, 156, 217, 0.03);
+      border: 1px solid rgba(177, 156, 217, 0.15);
       border-radius: 16px;
       padding: 2.5rem;
       margin: 3rem 0;
@@ -496,14 +495,14 @@
       background: rgba(255, 255, 255, 0.5);
       padding: 1.8rem;
       border-radius: 12px;
-      border: 1px solid rgba(107, 142, 35, 0.2);
+      border: 1px solid rgba(177, 156, 217, 0.2);
       transition: all 0.3s ease;
     }
     .frontend-skill:hover {
-      background: rgba(107, 142, 35, 0.1);
+      background: rgba(177, 156, 217, 0.1);
       transform: translateY(-5px);
       border-color: var(--primary);
-      box-shadow: 0 10px 25px rgba(107, 142, 35, 0.1);
+      box-shadow: 0 10px 25px rgba(177, 156, 217, 0.1);
     }
     .frontend-skill h4 {
       color: var(--primary);
@@ -517,7 +516,7 @@
     }
     .skill-bar {
       margin-top: 1rem;
-      background: rgba(107, 142, 35, 0.2);
+      background: rgba(177, 156, 217, 0.2);
       height: 6px;
       border-radius: 3px;
       overflow: hidden;
@@ -529,8 +528,8 @@
       transition: width 0.6s ease;
     }
     .cv-section {
-      background: linear-gradient(135deg, rgba(107, 142, 35, 0.1) 0%, rgba(154, 205, 50, 0.05) 100%);
-      border: 2px solid rgba(107, 142, 35, 0.3);
+      background: linear-gradient(135deg, rgba(177, 156, 217, 0.1) 0%, rgba(177, 156, 217, 0.05) 100%);
+      border: 2px solid rgba(177, 156, 217, 0.3);
       border-radius: 20px;
       padding: 3rem;
       text-align: center;
@@ -557,13 +556,13 @@
       font-weight: 700;
       cursor: pointer;
       transition: all 0.3s ease;
-      box-shadow: 0 8px 20px rgba(107, 142, 35, 0.3);
+      box-shadow: 0 8px 20px rgba(177, 156, 217, 0.3);
       display: inline-block;
       text-decoration: none;
     }
     .cv-btn:hover {
       transform: translateY(-3px);
-      box-shadow: 0 12px 30px rgba(107, 142, 35, 0.4);
+      box-shadow: 0 12px 30px rgba(177, 156, 217, 0.4);
     }
     .contact-content {
       max-width: 600px;
@@ -586,8 +585,8 @@
     .form-group input,
     .form-group textarea {
       padding: 1rem;
-      background: rgba(107, 142, 35, 0.05);
-      border: 1px solid rgba(107, 142, 35, 0.2);
+      background: rgba(177, 156, 217, 0.05);
+      border: 1px solid rgba(177, 156, 217, 0.2);
       border-radius: 12px;
       color: var(--text);
       font-family: inherit;
@@ -598,7 +597,7 @@
     .form-group textarea:focus {
       outline: none;
       border-color: var(--primary);
-      background: rgba(107, 142, 35, 0.08);
+      background: rgba(177, 156, 217, 0.08);
     }
     .form-group textarea {
       resize: vertical;
@@ -611,15 +610,15 @@
       margin-top: 3rem;
     }
     .info-card {
-      background: rgba(107, 142, 35, 0.08);
+      background: rgba(177, 156, 217, 0.08);
       padding: 1.5rem;
       border-radius: 12px;
       text-align: center;
-      border: 1px solid rgba(107, 142, 35, 0.2);
+      border: 1px solid rgba(177, 156, 217, 0.2);
       transition: all 0.3s;
     }
     .info-card:hover {
-      background: rgba(107, 142, 35, 0.12);
+      background: rgba(177, 156, 217, 0.12);
       transform: translateY(-5px);
       border-color: var(--primary);
     }
@@ -635,26 +634,43 @@
     }
     footer {
       background: rgba(245, 243, 240, 0.95);
-      border-top: 1px solid rgba(107, 142, 35, 0.1);
-      padding: 2rem;
+      border-top: 1px solid rgba(177, 156, 217, 0.1);
+      padding: 3rem 2rem;
       text-align: center;
       color: var(--text-muted);
+    }
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
     }
     .social-links {
       display: flex;
       justify-content: center;
-      gap: 2rem;
-      margin-top: 1rem;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
     }
     .social-links a {
-      color: var(--text);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: rgba(177, 156, 217, 0.15);
+      border: 2px solid var(--primary);
+      color: var(--primary);
+      font-size: 1.5rem;
       text-decoration: none;
-      font-size: 1rem;
       transition: all 0.3s;
     }
     .social-links a:hover {
-      color: var(--primary);
-      transform: translateY(-3px);
+      background: var(--primary);
+      color: white;
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(177, 156, 217, 0.3);
+    }
+    .footer-text {
+      font-size: 0.9rem;
     }
     @media (max-width: 768px) {
       .hero-content {
@@ -743,7 +759,7 @@
             <div class="stat-number">5+</div>
             <div class="stat-label">Technologies</div>
           </div>
-        
+        </div>
       </div>
       <div class="hero-image">
         <div class="image-wrapper">
@@ -756,25 +772,21 @@
     <h2 class="section-title">About Me</h2>
     <div class="about-content">
       <div class="about-text">
-       <p>
- <p>
-  I am a Computer Systems Engineering student at Birzeit University, with a strong academic background in both
-  <strong>software and hardware fundamentals</strong>. Throughout my studies, I have gained solid knowledge in
-  programming, data structures, operating systems, digital logic, and computer architecture.
-</p>
-
-<p style="margin-top: 1rem;">
-  In addition to my academic coursework, I completed <strong>QA training</strong> where I was introduced to the
-  basics of <strong>software testing and quality assurance</strong>, including manual testing concepts and
-  introductory test automation.
-</p>
-
-<p style="margin-top: 1rem;">
-  This experience strengthened my attention to detail and increased my interest in
-  <strong>QA and test automation</strong>. I am currently focused on continuing to develop my technical skills
-  and deepen my knowledge in this field.
-</p>
-
+        <p>
+          I am a Computer Systems Engineering student at Birzeit University, with a strong academic background in both
+          <strong>software and hardware fundamentals</strong>. Throughout my studies, I have gained solid knowledge in
+          programming, data structures, operating systems, digital logic, and computer architecture.
+        </p>
+        <p style="margin-top: 1rem;">
+          In addition to my academic coursework, I completed <strong>QA training</strong> where I was introduced to the
+          basics of <strong>software testing and quality assurance</strong>, including manual testing concepts and
+          introductory test automation.
+        </p>
+        <p style="margin-top: 1rem;">
+          This experience strengthened my attention to detail and increased my interest in
+          <strong>QA and test automation</strong>. I am currently focused on continuing to develop my technical skills
+          and deepen my knowledge in this field.
+        </p>
       </div>
       <div class="skills-grid">
         <div class="skill-category">
@@ -790,9 +802,9 @@
           <p>Jenkins, Maven, Git, GitHub </p>
         </div>
         <div class="skill-category">
-       <h3>Currently Learning</h3>
-       <p>Advanced QA Automation Frameworks, Manual Testing Methodologies, Test Framework Design, API Testing</p>
-      </div>
+          <h3>Currently Learning</h3>
+          <p>Advanced QA Automation Frameworks, Manual Testing Methodologies, Test Framework Design, API Testing</p>
+        </div>
       </div>
     </div>
   </section>
@@ -973,11 +985,21 @@
     </div>
   </section>
   <footer>
-    <p>© 2025 Saja Ayyad | Crafted with passion for QA automation | Palestine</p>
-    <div class="social-links">
-      <a href="https://github.com/SajaYaser" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/saja-ayyad-66b727333/" target="_blank">LinkedIn</a>
-      <a href="mailto:sajayaser085@gmail.com">Email</a>
+    <div class="footer-content">
+      <div class="social-links">
+        <a href="https://github.com/sajaayyad-2021" target="_blank" title="GitHub">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/saja-ayyad-66b727333/" target="_blank" title="LinkedIn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.475-2.236-1.986-2.236-1.081 0-1.722.722-2.005 1.413-.103.25-.129.599-.129.949v5.443h-3.554s.05-8.736 0-9.646h3.554v1.364c.429-.659 1.191-1.599 2.898-1.599 2.117 0 3.704 1.384 3.704 4.356v5.525zM5.337 8.855c-1.144 0-1.915-.759-1.915-1.71 0-.955.771-1.71 1.957-1.71 1.187 0 1.915.755 1.937 1.71 0 .951-.75 1.71-1.979 1.71zm1.582 11.597H3.635V9.806h3.284v10.646zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+        </a>
+        <a href="mailto:sajayaser085@gmail.com" title="Email">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </a>
+      </div>
+      <div class="footer-text">
+        <p>© 2025 Saja Ayyad | Palestine</p>
+      </div>
     </div>
   </footer>
   <script>
