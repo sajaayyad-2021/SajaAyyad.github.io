@@ -1,0 +1,40 @@
+{
+  "aboutMe": {
+    "name": "Saja Ayyad",
+    "role": "Quality Assurance (QA) & Automation | Computer Systems Engineering",
+    "bio": "Fifth-year CSE student from Ramallah, solid foundation in software development & databases. Passionate about QA and Automation (Selenium, Java/Python).",
+    "headshot": "assets/img/sajaphoto.png",
+    "links": {
+      "phone": "+972 593073706",
+      "email": "Sajayaser085@gmail.com",
+      "linkedin": "https://linkedin.com/in/sajaayyad",
+      "github": "https://github.com/sajaayyad"
+    }
+  },
+  "projects": [
+    {
+      "title": "Database Website for Dental Clinic",
+      "desc": "Full-stack app (Flask + MySQL) with functional & usability testing.",
+      "image": "assets/img/dental.webp",
+      "repo": "#",
+      "demo": "#"
+    },
+    {
+      "title": "Medical Test Management System",
+      "desc": "Python app with validation & QA testing scenarios; partial links to test missing data handling.",
+      "image": "assets/img/medtest.webp",
+      "repo": "#"
+    },
+    {
+      "title": "Job Shop Scheduling (Genetic Algorithm)",
+      "desc": "Java GA optimization with unit testing.",
+      "image": "assets/img/jss.webp",
+      "demo": "#"
+    },
+    {
+      "title": "Data Structures Suite",
+      "desc": "Radix Sort, BST evaluator, hashing with performance tests.",
+      "image": "assets/img/ds.webp"
+    }
+  ]
+}

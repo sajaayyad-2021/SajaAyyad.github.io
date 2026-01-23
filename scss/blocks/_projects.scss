@@ -1,0 +1,25 @@
+// scss/blocks/_projects.scss
+.projects {
+  padding-block: $space-12;
+  &__snap {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(min(280px, 85vw), 1fr);
+    gap: $space-6;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-block: $space-4;
+  }
+  &__card { scroll-snap-align: start; }
+}
+
+.card {
+  background: white; border:1px solid #e5e7eb; border-radius: $radius-2xl; overflow: hidden;
+  transition: transform .2s ease, box-shadow .3s ease;
+  &__img { inline-size: 100%; block-size: 180px; object-fit: cover; }
+  &__body { padding: $space-4; }
+  &__title { font-size: 1.125rem; margin-bottom: $space-2; }
+  &__text { color: $muted; margin-bottom: $space-4; }
+  &__link { color: $primary; }
+  &:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,.08); }
+}

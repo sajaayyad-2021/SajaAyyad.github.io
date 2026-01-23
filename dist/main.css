@@ -1,0 +1,52 @@
+/* dist/main.css (compiled) */
+*{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}*{margin:0}
+html:focus-within{scroll-behavior:smooth}body{min-height:100vh;line-height:1.5}
+img,picture,video,canvas,svg{display:block;max-width:100%}input,button,textarea,select{font:inherit}
+:root{color-scheme:light dark}
+.page{font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Noto Naskh Arabic UI",Arial,sans-serif;color:#111827;background:#f8fafc}
+.container{width:100%;margin-inline:auto;max-width:min(1100px,90vw);padding-inline:1rem}
+.section-title{font-size:clamp(1.25rem,1rem + 1vw,1.75rem);margin-block:3rem 1.5rem}
+a{color:#0ea5e9;text-decoration:none}a:hover{color:#0284c7}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.btn{display:inline-block;border:0;cursor:pointer;padding:.75rem 1.5rem;border-radius:1.25rem;transition:transform .2s ease,background-color .3s ease,color .3s ease}
+.btn--primary{background:#0ea5e9;color:#fff}.btn--ghost{background:transparent;color:#0ea5e9;border:1px solid #0ea5e9}
+.btn:hover{transform:translateY(-1px)}.btn:active{transform:translateY(0)}
+.header{position:sticky;top:0;z-index:50;backdrop-filter:saturate(1.2) blur(8px);background:rgba(255,255,255,.8);border-bottom:1px solid rgba(0,0,0,.06);transition:height .3s ease,padding .3s ease,background .3s ease}
+.header__inner{display:flex;align-items:center;justify-content:space-between;padding:1rem 0}
+.header__logo{inline-size:120px;block-size:auto}
+.header__list{display:flex;gap:1.5rem;list-style:none}
+.header__link{padding:.5rem .75rem;border-radius:1.25rem}
+.header--shrink .header__inner{padding:.5rem 0}
+@media (max-width:900px){
+  .header__toggle{display:inline-flex;border:1px solid #e5e7eb;padding:.5rem .75rem;border-radius:1.25rem;background:#fff}
+  .header__list{display:none;position:absolute;inset-inline:1rem;top:calc(100% + .5rem);background:#fff;border:1px solid #e5e7eb;border-radius:1.25rem;padding:1rem;flex-direction:column}
+  .header__list.is-open{display:flex}
+}
+@keyframes floaty{from{transform:translateY(0)}to{transform:translateY(-8px)}}
+.hero{padding-block:clamp(3rem,10vh,20vh) 3rem}
+.hero__grid{display:grid;grid-template-columns:1.2fr .8fr;gap:2rem;align-items:center}
+.hero__title{font-size:clamp(1.5rem,1rem + 2vw,2.25rem);margin-bottom:1rem}
+.hero__subtitle{color:#6b7280;margin-bottom:1.5rem}
+.hero__actions{display:flex;gap:1rem}
+.hero__visual{display:grid;place-items:center}
+.hero__card{inline-size:min(360px,90%);aspect-ratio:4/3;border-radius:1.25rem;background:linear-gradient(120deg,#86d4f6,white);box-shadow:0 10px 30px rgba(2,132,199,.2);animation:floaty 2.4s ease-in-out infinite alternate}
+@media (max-width:900px){.hero__grid{grid-template-columns:1fr}.hero__visual{order:-1}}
+.projects{padding-block:3rem}
+.projects__snap{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(min(280px,85vw),1fr);gap:1.5rem;overflow-x:auto;scroll-snap-type:x mandatory;padding-block:1rem}
+.projects__card{scroll-snap-align:start}
+.card{background:#fff;border:1px solid #e5e7eb;border-radius:1.25rem;overflow:hidden;transition:transform .2s ease,box-shadow .3s ease}
+.card__img{inline-size:100%;block-size:180px;object-fit:cover}
+.card__body{padding:1rem}.card__title{font-size:1.125rem;margin-bottom:.5rem}.card__text{color:#6b7280;margin-bottom:1rem}
+.card:hover{transform:translateY(-4px);box-shadow:0 12px 24px rgba(0,0,0,.08)}
+.skills{padding-block:3rem}.skills__list{display:flex;flex-wrap:wrap;gap:.75rem}.skills__item{background:#fff;border:1px solid #e5e7eb;border-radius:1.25rem;padding:.5rem 1rem}
+.form{display:grid;gap:.75rem;max-inline-size:640px}.form__label{font-weight:600}
+.form__input,.form__textarea{padding:.75rem;border:1px solid #e5e7eb;border-radius:1.25rem;background:#fff}
+.footer{background:#f1f5f9}.footer__inner{width:100%;margin-inline:auto;max-width:min(1100px,90vw);padding-inline:1rem;display:flex;justify-content:space-between;align-items:center;padding-block:1.5rem}
+.footer__copy{color:#6b7280}.footer__social{display:flex;gap:1rem;list-style:none}.footer__link{color:#0ea5e9}
+@media (prefers-color-scheme:dark){
+  .page{background:#0b1220;color:#e5e7eb}
+  .card,.skills__item,.form__input,.form__textarea{background:#0f172a;border-color:#1f2937}
+  .footer{background:#0f172a}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important;scroll-behavior:auto !important}}
+.main{padding-block-end:max(10vh,4rem)}

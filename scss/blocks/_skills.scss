@@ -1,0 +1,6 @@
+// scss/blocks/_skills.scss
+.skills {
+  padding-block: $space-12;
+  &__list { display:flex; flex-wrap:wrap; gap: $space-3; }
+  &__item { background: white; border:1px solid #e5e7eb; border-radius:$radius-2xl; padding: $space-2 $space-4; }
+}

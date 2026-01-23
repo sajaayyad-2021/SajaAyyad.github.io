@@ -1,0 +1,56 @@
+.hero {
+  padding-block: clamp($space-12, 10vh, 20vh) $space-12;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    gap: $space-8;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: clamp(1.5rem, 1rem + 2vw, 2.25rem);
+    margin-bottom: $space-4;
+  }
+
+  &__subtitle {
+    color: $muted;
+    margin-bottom: $space-6;
+  }
+
+  &__actions {
+    display: flex;
+    gap: $space-4;
+  }
+
+  &__visual {
+    display: grid;
+    place-items: center;
+  }
+
+  &__card {
+    inline-size: min(360px, 90%);
+    aspect-ratio: 4/3;
+    border-radius: $radius-2xl;
+    background: linear-gradient(120deg, color-mix(in oklab, $primary 30%, white), white);
+    box-shadow: 0 10px 30px rgba(187, 196, 201, 0.2);
+    animation: floaty 2.4s ease-in-out infinite alternate;
+    overflow: hidden;
+
+    img.hero__photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: inherit;
+    }
+  }
+
+  @include mq(md) {
+    &__grid {
+      grid-template-columns: 1fr;
+    }
+    &__visual {
+      order: -1;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+// scss/main.scss
+@use "utils/variables";
+@use "utils/mixins";
+@use "base/reset";
+@use "base/typography";
+@use "blocks/header";
+@use "blocks/hero";
+@use "blocks/about";
+@use "blocks/projects";
+@use "blocks/skills";
+@use "blocks/contact";
+@use "blocks/footer";
+
+/* Responsive: prevent overflow and add min/max examples */
+.container { max-width: min(1100px, 90vw); }
+.hero__title { font-size: min(9vw, 2.25rem); }
+.main { padding-block-end: max(10vh, 4rem); }
+
+/* Color scheme media query & reduced motion */
+@media (prefers-color-scheme: dark) {
+  .page { background:#0b1220; color:#e5e7eb; }
+  .card, .skills__item, .form__input, .form__textarea { background:#0f172a; border-color:#1f2937; }
+  .footer { background:#0f172a; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}

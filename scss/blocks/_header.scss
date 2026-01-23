@@ -1,0 +1,26 @@
+// scss/blocks/_header.scss
+.header {
+  position: sticky; top: 0; z-index: 50;
+  backdrop-filter: saturate(1.2) blur(8px);
+  background: color-mix(in oklab, white 80%, transparent);
+  border-bottom: 1px solid rgba(0,0,0,.06);
+  transition: height .3s ease, padding .3s ease, background .3s ease;
+  &__inner { display: flex; align-items: center; justify-content: space-between; padding: $space-4 0; }
+  &__brand { display: inline-flex; align-items:center; }
+  &__logo { inline-size: 120px; block-size: auto; }
+  &__nav {}
+  &__toggle { display: none; }
+  &__list { display: flex; gap: $space-6; list-style: none; }
+  &__link { padding: $space-2 $space-3; border-radius: $radius-2xl; &:focus-visible{ @include focus-ring; } }
+
+  &--shrink {
+    .header__inner { padding: $space-2 0; }
+    & { background: color-mix(in oklab, white 95%, transparent); }
+  }
+
+  @include mq(md){
+    &__toggle { display: inline-flex; border: 1px solid #e5e7eb; padding: $space-2 $space-3; border-radius: $radius-2xl; background: white; }
+    &__list { display:none; position: absolute; inset-inline: $space-4; top: calc(100% + $space-2); background: white; border:1px solid #e5e7eb; border-radius: $radius-2xl; padding: $space-4; flex-direction: column; }
+    &__list.is-open { display:flex; }
+  }
+}

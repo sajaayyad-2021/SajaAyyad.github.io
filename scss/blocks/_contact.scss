@@ -1,0 +1,10 @@
+// scss/blocks/_contact.scss
+.form {
+  display:grid; gap: $space-3; max-inline-size: 640px;
+  &__label { font-weight: 600; }
+  &__input, &__textarea {
+    padding: $space-3; border:1px solid #e5e7eb; border-radius: $radius-2xl; background:white;
+    &:focus-visible { @include focus-ring; }
+  }
+  &__submit { justify-self: start; }
+}

@@ -1,0 +1,8 @@
+// scss/blocks/_footer.scss
+.footer {
+  background: #f1f5f9;
+  &__inner { @include container; display:flex; justify-content: space-between; align-items:center; padding-block: $space-6; }
+  &__copy { color: $muted; }
+  &__social { display:flex; gap: $space-4; list-style:none; }
+  &__link { color: $primary; }
+}
