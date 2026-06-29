@@ -31,7 +31,7 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
 
 /* NAV */
 nav{position:fixed;top:0;width:100%;z-index:100;padding:1rem 2.5rem;display:flex;justify-content:space-between;align-items:center;background:rgba(250,248,245,0.9);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
-.nav-logo{font-family:var(--serif);font-size:1.25rem;color:var(--navy)}
+.nav-logo{font-family:var(--serif);font-size:1rem;color:var(--navy)}
 .nav-links{display:flex;gap:2rem;list-style:none}
 .nav-links a{color:var(--text2);text-decoration:none;font-size:0.88rem;font-weight:500;transition:color 0.2s}
 .nav-links a:hover{color:var(--navy)}
@@ -185,6 +185,63 @@ footer p{font-size:0.8rem;color:var(--text3)}
 .modal-no-img{background:var(--bg2);border:2px dashed var(--border2);border-radius:10px;padding:3rem 2rem;text-align:center;color:var(--text3)}
 .modal-no-img p{font-size:0.85rem;margin-top:0.5rem}
 .modal-no-img code{color:var(--navy);font-size:0.8rem}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes slideRight{from{opacity:0;transform:translateX(-24px)}to{opacity:1;transform:translateX(0)}}
+@keyframes pulse-dot{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.5);opacity:0.6}}
+
+.hero-left{animation:fadeUp 0.8s ease both}
+.hero-right{animation:fadeIn 1s ease 0.3s both}
+.eyebrow{animation:slideRight 0.6s ease both}
+
+/* Scroll reveal */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 0.65s ease,transform 0.65s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-left{opacity:0;transform:translateX(-28px);transition:opacity 0.65s ease,transform 0.65s ease}
+.reveal-left.visible{opacity:1;transform:translateX(0)}
+
+/* Magnetic card tilt effect */
+.tilt-card{transition:transform 0.15s ease,box-shadow 0.15s ease;will-change:transform}
+
+/* Cursor spotlight */
+.spotlight{pointer-events:none;position:fixed;width:350px;height:350px;border-radius:50%;background:radial-gradient(circle,rgba(30,58,95,0.06) 0%,transparent 70%);transform:translate(-50%,-50%);z-index:0;transition:opacity 0.3s;opacity:0}
+
+/* Animated underline on nav */
+.nav-links a{position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:-3px;left:0;width:0;height:2px;background:var(--navy);border-radius:2px;transition:width 0.25s ease}
+.nav-links a:hover::after{width:100%}
+
+/* Stagger children */
+.stagger > *{opacity:0;transform:translateY(20px);transition:opacity 0.5s ease,transform 0.5s ease}
+.stagger.visible > *:nth-child(1){opacity:1;transform:none;transition-delay:0.05s}
+.stagger.visible > *:nth-child(2){opacity:1;transform:none;transition-delay:0.15s}
+.stagger.visible > *:nth-child(3){opacity:1;transform:none;transition-delay:0.25s}
+.stagger.visible > *:nth-child(4){opacity:1;transform:none;transition-delay:0.35s}
+.stagger.visible > *:nth-child(5){opacity:1;transform:none;transition-delay:0.45s}
+.stagger.visible > *:nth-child(6){opacity:1;transform:none;transition-delay:0.55s}
+
+/* Pulse eyebrow dot */
+.eyebrow-dot{animation:pulse-dot 2s ease-in-out infinite}
+
+/* Hover lift for exp card */
+.exp-card{transition:transform 0.25s ease,box-shadow 0.25s ease}
+.exp-card:hover{transform:translateY(-4px);box-shadow:0 12px 36px rgba(30,58,95,0.12)}
+
+/* Button ripple */
+.btn-p,.btn-o{position:relative;overflow:hidden}
+.btn-p::after,.btn-o::after{content:'';position:absolute;inset:0;background:rgba(255,255,255,0.15);opacity:0;transition:opacity 0.2s}
+.btn-p:hover::after,.btn-o:hover::after{opacity:1}
+
+/* Clean cert list rows */
+.clean-cert-row{display:flex;align-items:center;justify-content:space-between;padding:0.85rem 0;border-bottom:1px solid var(--border);transition:padding-left 0.2s}
+.clean-cert-row:last-child{border-bottom:none}
+.clean-cert-row:hover{padding-left:6px}
+.clean-cert-row-left{display:flex;flex-direction:column;gap:0.15rem}
+.clean-cert-row-name{font-size:0.88rem;font-weight:600;color:var(--text)}
+.clean-cert-row-org{font-size:0.76rem;color:var(--text3)}
+.clean-cert-row-meta{font-size:0.75rem;color:var(--text3);white-space:nowrap;font-weight:500;flex-shrink:0;margin-left:1rem}
 </style>
 </head>
 <body>
@@ -212,7 +269,7 @@ footer p{font-size:0.8rem;color:var(--text3)}
     </div>
     <div class="badge-strip">
       <span class="badge badge-amber">QA Automation Training · 50h</span>
-      <span class="badge badge-mint">🎓 Birzeit University · CSE</span>
+      <span class="badge badge-mint">Birzeit University · CSE</span>
     </div>
   </div>
   <div class="hero-right">
@@ -231,7 +288,7 @@ footer p{font-size:0.8rem;color:var(--text3)}
 </div>
 
 <!-- ABOUT -->
-<section id="about">
+<section id="about" class="reveal">
   <div class="sec-label">Background</div>
   <h2 class="sec-title">About Me</h2>
   <div class="sec-divider"></div>
@@ -241,24 +298,24 @@ footer p{font-size:0.8rem;color:var(--text3)}
       <p>I completed intensive <strong>QA Automation &amp; Advanced Software Testing</strong> training (50 hours) at Super Quality Academy, and previously trained as a <strong>QA Trainee at ProGineer Technologies</strong> where I executed manual testing, performed API testing with Postman, and assisted in Selenium automation.</p>
       <p>I have also completed courses in <strong>Flutter, JavaScript, Front-End Development, and Linux</strong>, giving me a well-rounded understanding of the full software development lifecycle.</p>
     </div>
-    <div class="skills-stack">
-      <div class="skill-row">
+    <div class="skills-stack stagger">
+      <div class="skill-row tilt-card">
         <h4>Languages</h4>
         <p>Java · JavaScript · Python · SQL</p>
       </div>
-      <div class="skill-row">
+      <div class="skill-row tilt-card">
         <h4>Libraries &amp; Frameworks</h4>
         <p>Selenium WebDriver · TestNG · Page Object Model · ExtentReports · REST APIs</p>
       </div>
-      <div class="skill-row">
+      <div class="skill-row tilt-card">
         <h4>Databases</h4>
         <p>MySQL</p>
       </div>
-      <div class="skill-row">
+      <div class="skill-row tilt-card">
         <h4>Tools</h4>
         <p>Jenkins · Maven · Git · GitHub · IntelliJ · Eclipse · Postman · Linux · JSON · XML</p>
       </div>
-      <div class="skill-row">
+      <div class="skill-row tilt-card">
         <h4>Soft Skills</h4>
         <p>Critical Thinking · Team Collaboration · Presentation · Self-Management · Works Under Pressure</p>
       </div>
@@ -268,7 +325,7 @@ footer p{font-size:0.8rem;color:var(--text3)}
 
 <!-- EXPERIENCE -->
 <div class="alt-bg">
-  <div class="alt-bg-inner" id="experience">
+  <div class="alt-bg-inner reveal" id="experience">
     <div class="sec-label">Work</div>
     <h2 class="sec-title">Professional Experience</h2>
     <div class="sec-divider"></div>
@@ -293,7 +350,7 @@ footer p{font-size:0.8rem;color:var(--text3)}
       <div style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.8rem">
         <div style="font-size:0.82rem;color:var(--text3);font-weight:500">📄 Internship Certificate · Issued Jan 26, 2026 · Ramallah, West Bank</div>
         <button onclick="document.getElementById('modal-pg').style.display='flex';document.body.style.overflow='hidden'" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--navy-glow);border:1.5px solid var(--border2);border-radius:10px;padding:0.55rem 1.1rem;font-size:0.84rem;font-weight:600;color:var(--navy);cursor:pointer;font-family:var(--sans);transition:all 0.2s">
-           View Certificate
+          👁 View Certificate
         </button>
       </div>
     </div>
@@ -301,7 +358,7 @@ footer p{font-size:0.8rem;color:var(--text3)}
 </div>
 
 <!-- CERTIFICATIONS -->
-<section id="certifications">
+<section id="certifications" class="reveal">
   <div class="sec-label">Credentials</div>
   <h2 class="sec-title">Certifications &amp; Training</h2>
   <div class="sec-divider"></div>
@@ -314,14 +371,14 @@ footer p{font-size:0.8rem;color:var(--text3)}
       <div style="font-size:0.82rem;color:var(--navy);font-weight:600">Super Quality Academy · Feb – May 2026 · 50 Hours</div>
     </div>
     <button onclick="document.getElementById('modal-sq').style.display='flex';document.body.style.overflow='hidden'" style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--navy-glow);border:1.5px solid var(--border2);border-radius:10px;padding:0.55rem 1.1rem;font-size:0.84rem;font-weight:600;color:var(--navy);cursor:pointer;font-family:var(--sans)">
-       View Certificate
+      👁 View Certificate
     </button>
   </div>
 
   <!-- Upcoming certs -->
   <div style="font-size:0.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--text3);margin-bottom:1.2rem">Upcoming Certifications</div>
-  <div class="certs-grid">
-    <div class="cert-card">
+  <div class="certs-grid stagger">
+    <div class="cert-card tilt-card">
       <div class="cert-num">Upcoming · 01</div>
       <div class="cert-name">Performance Testing &amp; JMeter</div>
       <div class="cert-issuer">ISTQB-CTFL Performance Testing</div>
@@ -333,7 +390,7 @@ footer p{font-size:0.8rem;color:var(--text3)}
         <div class="cert-topic">Full JMeter project for mobile &amp; web</div>
       </div>
     </div>
-    <div class="cert-card">
+    <div class="cert-card tilt-card">
       <div class="cert-num">Upcoming · 02</div>
       <div class="cert-name">Mobile Testing</div>
       <div class="cert-issuer">ASTQB Mobile Testing</div>
@@ -345,7 +402,7 @@ footer p{font-size:0.8rem;color:var(--text3)}
         <div class="cert-topic">Security Testing in Mobile Testing</div>
       </div>
     </div>
-    <div class="cert-card">
+    <div class="cert-card tilt-card">
       <div class="cert-num">Upcoming · 03</div>
       <div class="cert-name">Automation API Testing</div>
       <div class="cert-issuer">Postman / API Automation</div>
@@ -356,7 +413,7 @@ footer p{font-size:0.8rem;color:var(--text3)}
         <div class="cert-topic">Automation Testing using Postman</div>
       </div>
     </div>
-    <div class="cert-card">
+    <div class="cert-card tilt-card">
       <div class="cert-num">Upcoming · 04</div>
       <div class="cert-name">Selenium WebDriver</div>
       <div class="cert-issuer">ISTQB Test Automation Engineering</div>
@@ -369,16 +426,127 @@ footer p{font-size:0.8rem;color:var(--text3)}
     </div>
   </div>
 
+ 
+  <!-- Other Completed Certs -->
+  <div style="margin-top:3rem">
+    <div style="font-size:0.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--text3);margin-bottom:1.5rem">Other Completed Certifications</div>
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1.4rem" class="other-certs-grid">
 
+      <!-- Udacity -->
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;box-shadow:0 1px 4px rgba(30,58,95,0.06);transition:all 0.25s" onmouseover="this.style.borderColor='var(--border2)';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='';this.style.transform=''">
+        <div style="padding:1.3rem 1.4rem 0">
+          <div style="font-size:0.68rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);margin-bottom:0.4rem">Udacity · Palestine Launchpad / Google / Spark</div>
+          <div style="font-size:0.97rem;font-weight:700;color:var(--text);margin-bottom:0.4rem">Front End Web Developer Nanodegree</div>
+          <p style="font-size:0.82rem;color:var(--text2);line-height:1.65;margin-bottom:0.8rem">Completed comprehensive nanodegree in Front End Web Development, mastering HTML5, CSS3, JavaScript, responsive design, and modern web development best practices through hands-on projects.</p>
+        </div>
+        <div style="padding:0 1.4rem">
+          <div style="display:flex;flex-wrap:wrap;gap:0.35rem;margin-bottom:0.9rem">
+            <span style="font-size:0.7rem;font-weight:700;padding:0.22rem 0.6rem;border-radius:6px;background:var(--navy-glow);color:var(--navy)">HTML5</span>
+            <span style="font-size:0.7rem;font-weight:700;padding:0.22rem 0.6rem;border-radius:6px;background:var(--navy-glow);color:var(--navy)">CSS3</span>
+            <span style="font-size:0.7rem;font-weight:700;padding:0.22rem 0.6rem;border-radius:6px;background:var(--navy-glow);color:var(--navy)">JavaScript</span>
+            <span style="font-size:0.7rem;font-weight:700;padding:0.22rem 0.6rem;border-radius:6px;background:var(--navy-glow);color:var(--navy)">Responsive Design</span>
+          </div>
+        </div>
+        <div style="padding:0 1.4rem 1.3rem;display:flex;align-items:center;justify-content:space-between">
+          <span style="font-size:0.75rem;color:var(--text3);font-weight:500">Jan 2026</span>
+          <button onclick="document.getElementById('modal-udacity').style.display='flex';document.body.style.overflow='hidden'" style="display:inline-flex;align-items:center;gap:0.4rem;background:var(--navy-glow);border:1.5px solid var(--border2);border-radius:8px;padding:0.4rem 0.85rem;font-size:0.78rem;font-weight:600;color:var(--navy);cursor:pointer;font-family:var(--sans)">View Certificate</button>
+        </div>
+      </div>
+
+      <!-- Hope International -->
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;box-shadow:0 1px 4px rgba(30,58,95,0.06);transition:all 0.25s" onmouseover="this.style.borderColor='var(--border2)';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='';this.style.transform=''">
+        <div style="padding:1.3rem 1.4rem 0">
+          <div style="font-size:0.68rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);margin-bottom:0.4rem">The Hope International Company</div>
+          <div style="font-size:0.97rem;font-weight:700;color:var(--text);margin-bottom:0.4rem">Front-End Web Design</div>
+          <p style="font-size:0.82rem;color:var(--text2);line-height:1.65;margin-bottom:0.8rem">Learned fundamentals of front-end development using HTML, CSS, and JavaScript, with focus on responsive design and user experience. Built interactive interfaces and worked with dynamic content and APIs.</p>
+        </div>
+        <div style="padding:0 1.4rem">
+          <div style="display:flex;flex-wrap:wrap;gap:0.35rem;margin-bottom:0.9rem">
+            <span style="font-size:0.7rem;font-weight:700;padding:0.22rem 0.6rem;border-radius:6px;background:var(--navy-glow);color:var(--navy)">HTML</span>
+            <span style="font-size:0.7rem;font-weight:700;padding:0.22rem 0.6rem;border-radius:6px;background:var(--navy-glow);color:var(--navy)">CSS</span>
+            <span style="font-size:0.7rem;font-weight:700;padding:0.22rem 0.6rem;border-radius:6px;background:var(--navy-glow);color:var(--navy)">JavaScript</span>
+            <span style="font-size:0.7rem;font-weight:700;padding:0.22rem 0.6rem;border-radius:6px;background:var(--navy-glow);color:var(--navy)">UX/UI</span>
+          </div>
+        </div>
+        <div style="padding:0 1.4rem 1.3rem;display:flex;align-items:center;justify-content:space-between">
+          <span style="font-size:0.75rem;color:var(--text3);font-weight:500">Apr – Jun 2025 · 32 Hours</span>
+          <button onclick="document.getElementById('modal-hope').style.display='flex';document.body.style.overflow='hidden'" style="display:inline-flex;align-items:center;gap:0.4rem;background:var(--navy-glow);border:1.5px solid var(--border2);border-radius:8px;padding:0.4rem 0.85rem;font-size:0.78rem;font-weight:600;color:var(--navy);cursor:pointer;font-family:var(--sans)">View Certificate</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Other certs - cards with progress bars -->
+  <div style="margin-top:1.5rem;display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem" class="stagger">
+
+    <div class="tilt-card" style="background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.3rem;box-shadow:0 1px 4px rgba(30,58,95,0.06);transition:all 0.25s">
+      <div style="font-size:0.68rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);margin-bottom:0.3rem">GDG · Gaza Sky Geeks</div>
+      <div style="font-size:0.95rem;font-weight:700;color:var(--text);margin-bottom:0.15rem">JavaScript Bootcamp</div>
+      <div style="font-size:0.76rem;color:var(--text3);margin-bottom:0.9rem">Apr 2025 · 20 Hours</div>
+      <div style="height:4px;background:rgba(30,58,95,0.1);border-radius:2px;overflow:hidden">
+        <div style="height:100%;width:72%;background:linear-gradient(90deg,var(--navy),rgba(30,58,95,0.5));border-radius:2px"></div>
+      </div>
+      <div style="font-size:0.7rem;color:var(--text3);margin-top:0.4rem;text-align:right">Intermediate</div>
+    </div>
+
+    <div class="tilt-card" style="background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.3rem;box-shadow:0 1px 4px rgba(30,58,95,0.06);transition:all 0.25s">
+      <div style="font-size:0.68rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);margin-bottom:0.3rem">Hope International Academy</div>
+      <div style="font-size:0.95rem;font-weight:700;color:var(--text);margin-bottom:0.15rem">Front-End Development</div>
+      <div style="font-size:0.76rem;color:var(--text3);margin-bottom:0.9rem">Mar – May 2025 · 40 Hours</div>
+      <div style="height:4px;background:rgba(30,58,95,0.1);border-radius:2px;overflow:hidden">
+        <div style="height:100%;width:78%;background:linear-gradient(90deg,var(--navy),rgba(30,58,95,0.5));border-radius:2px"></div>
+      </div>
+      <div style="font-size:0.7rem;color:var(--text3);margin-top:0.4rem;text-align:right">Intermediate</div>
+    </div>
+
+    <div class="tilt-card" style="background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.3rem;box-shadow:0 1px 4px rgba(30,58,95,0.06);transition:all 0.25s">
+      <div style="font-size:0.68rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);margin-bottom:0.3rem">Microsoft Learn Student Ambassadors</div>
+      <div style="font-size:0.95rem;font-weight:700;color:var(--text);margin-bottom:0.15rem">Git and GitHub Workshop</div>
+      <div style="font-size:0.76rem;color:var(--text3);margin-bottom:0.9rem">Dec 2024</div>
+      <div style="height:4px;background:rgba(30,58,95,0.1);border-radius:2px;overflow:hidden">
+        <div style="height:100%;width:85%;background:linear-gradient(90deg,var(--navy),rgba(30,58,95,0.5));border-radius:2px"></div>
+      </div>
+      <div style="font-size:0.7rem;color:var(--text3);margin-top:0.4rem;text-align:right">Proficient</div>
+    </div>
+
+    <div class="tilt-card" style="background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.3rem;box-shadow:0 1px 4px rgba(30,58,95,0.06);transition:all 0.25s">
+      <div style="font-size:0.68rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);margin-bottom:0.3rem">GDG Birzeit University</div>
+      <div style="font-size:0.95rem;font-weight:700;color:var(--text);margin-bottom:0.15rem">Linux Bootcamp</div>
+      <div style="font-size:0.76rem;color:var(--text3);margin-bottom:0.9rem">Feb 2024 · 18 Hours</div>
+      <div style="height:4px;background:rgba(30,58,95,0.1);border-radius:2px;overflow:hidden">
+        <div style="height:100%;width:65%;background:linear-gradient(90deg,var(--navy),rgba(30,58,95,0.5));border-radius:2px"></div>
+      </div>
+      <div style="font-size:0.7rem;color:var(--text3);margin-top:0.4rem;text-align:right">Intermediate</div>
+    </div>
+
+  </div>
+
+  <!-- CV Image Section -->
+  <div style="margin-top:3rem;padding-top:3rem;border-top:1px solid var(--border)">
+    <div style="font-size:0.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--text3);margin-bottom:1.5rem">My Resume</div>
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1.5rem;box-shadow:0 1px 4px rgba(30,58,95,0.06);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.2rem">
+      <div>
+        <div style="font-size:1rem;font-weight:700;color:var(--text);margin-bottom:0.3rem">Saja Ayyad — CV</div>
+        <div style="font-size:0.82rem;color:var(--text2)">QA Automation Engineer · Computer Systems Engineering Graduate</div>
+      </div>
+      <div style="display:flex;gap:0.7rem;flex-wrap:wrap">
+        <button onclick="document.getElementById('modal-cv').style.display='flex';document.body.style.overflow='hidden'" style="display:inline-flex;align-items:center;gap:0.4rem;background:var(--navy-glow);border:1.5px solid var(--border2);border-radius:8px;padding:0.5rem 1rem;font-size:0.82rem;font-weight:600;color:var(--navy);cursor:pointer;font-family:var(--sans)">View CV</button>
+        <a href="assets/cv/saja_ayyad_cv.pdf" download style="display:inline-flex;align-items:center;gap:0.4rem;background:var(--navy);border:none;border-radius:8px;padding:0.5rem 1rem;font-size:0.82rem;font-weight:600;color:#fff;cursor:pointer;font-family:var(--sans);text-decoration:none">Download PDF</a>
+      </div>
+    </div>
+  </div>
+
+</section>
 
 <!-- PROJECTS -->
 <div class="alt-bg">
-  <div class="alt-bg-inner" id="projects">
+  <div class="alt-bg-inner reveal" id="projects">
     <div class="sec-label">Work</div>
     <h2 class="sec-title">Technical Projects</h2>
     <div class="sec-divider"></div>
-    <div class="projects-grid">
-      <div class="project-card">
+    <div class="projects-grid stagger">
+      <div class="project-card tilt-card">
         <div class="project-top">
           <div class="project-type">QA Automation</div>
           <div class="project-name">OrangeHRM Automation Suite</div>
@@ -391,7 +559,7 @@ footer p{font-size:0.8rem;color:var(--text3)}
           <a href="https://github.com/sajaayyad-2021/OrangeHRM-Selenium-test-Automation-Suite" target="_blank" class="project-link">View on GitHub →</a>
         </div>
       </div>
-      <div class="project-card">
+      <div class="project-card tilt-card">
         <div class="project-top">
           <div class="project-type">Web Application</div>
           <div class="project-name">Dental Clinic Management</div>
@@ -404,7 +572,7 @@ footer p{font-size:0.8rem;color:var(--text3)}
           <a href="https://github.com/sajaayyad-2021/DentalClinic-DataBase" target="_blank" class="project-link">View on GitHub →</a>
         </div>
       </div>
-      <div class="project-card">
+      <div class="project-card tilt-card">
         <div class="project-top">
           <div class="project-type">Python / QA</div>
           <div class="project-name">Medical Test Management</div>
@@ -422,7 +590,7 @@ footer p{font-size:0.8rem;color:var(--text3)}
     <div style="margin-top:2.5rem">
       <div style="font-size:0.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--text3);margin-bottom:1.2rem">Data Structures &amp; Algorithms</div>
       <div class="projects-grid">
-        <div class="project-card">
+        <div class="project-card tilt-card">
           <div class="project-top">
             <div class="project-type">C / Data Structures</div>
             <div class="project-name">Binary Expression Evaluator</div>
@@ -431,7 +599,7 @@ footer p{font-size:0.8rem;color:var(--text3)}
           <div class="project-tags"><span class="tag">C</span><span class="tag">BST</span></div>
           <div class="project-footer"><a href="https://github.com/sajaayyad-2021/Binary-Arithmetic-Expression-EvaluatorUsing-BST" target="_blank" class="project-link">View on GitHub →</a></div>
         </div>
-        <div class="project-card">
+        <div class="project-card tilt-card">
           <div class="project-top">
             <div class="project-type">C / Sorting</div>
             <div class="project-name">Radix Sort LinkedList</div>
@@ -440,7 +608,7 @@ footer p{font-size:0.8rem;color:var(--text3)}
           <div class="project-tags"><span class="tag">C</span><span class="tag">LinkedList</span><span class="tag">Sorting</span></div>
           <div class="project-footer"><a href="https://github.com/sajaayyad-2021/radix-sort-linkedlist" target="_blank" class="project-link">View on GitHub →</a></div>
         </div>
-        <div class="project-card">
+        <div class="project-card tilt-card">
           <div class="project-top">
             <div class="project-type">C / Hashing</div>
             <div class="project-name">Dictionary Hashing System</div>
@@ -451,21 +619,14 @@ footer p{font-size:0.8rem;color:var(--text3)}
         </div>
       </div>
     </div>
-
-    <div class="cv-cta">
-      <h3>Download CV</h3>
-      <p>Full experience, education, and projects in one document.</p>
-      <a href="#" class="btn-p">Download CV (PDF)</a>
-    </div>
-  </div>
 </div>
 
 <!-- CONTACT -->
-<section id="contact">
+<section id="contact" class="reveal">
   <div class="sec-label">Let's Talk</div>
   <h2 class="sec-title">Get in Touch</h2>
   <div class="sec-divider"></div>
-  <div class="contact-cards">
+  <div class="contact-cards stagger">
     <div class="contact-card">
       <div class="contact-icon"></div>
       <h4>Email</h4>
@@ -521,27 +682,129 @@ footer p{font-size:0.8rem;color:var(--text3)}
     </div>
   </div>
 </div>
+<!-- MODAL: Udacity -->
+<div id="modal-udacity" style="display:none;position:fixed;inset:0;background:rgba(10,15,25,0.75);backdrop-filter:blur(6px);z-index:9999;align-items:center;justify-content:center;padding:1.5rem" onclick="if(event.target===this){this.style.display='none';document.body.style.overflow=''}">
+  <div style="background:#fff;border-radius:20px;max-width:720px;width:100%;max-height:90vh;overflow-y:auto;box-shadow:0 24px 60px rgba(10,15,25,0.25)">
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:1.1rem 1.5rem;border-bottom:1px solid #eee">
+      <span style="font-size:0.95rem;font-weight:700;color:#1a1523">Front End Web Developer Nanodegree — Udacity</span>
+      <button onclick="document.getElementById('modal-udacity').style.display='none';document.body.style.overflow=''" style="background:none;border:none;font-size:1.5rem;cursor:pointer;color:#9b92b3;line-height:1">×</button>
+    </div>
+    <div style="padding:1.5rem">
+      <img src="assets/img/cert_udacity.png" alt="Udacity Certificate" style="width:100%;border-radius:10px;display:block" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <div style="display:none;background:#f3efe9;border:2px dashed #ccc;border-radius:10px;padding:3rem;text-align:center;color:#9b92b3"><p>ضعي صورة الشهادة في:<br><code style="color:#1e3a5f">assets/img/cert_udacity.png</code></p></div>
+      <p style="text-align:center;font-size:0.8rem;color:#9b92b3;margin-top:0.75rem;font-weight:500">Udacity · Palestine Launchpad / Google / Spark · Jan 2026</p>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: Hope -->
+<div id="modal-hope" style="display:none;position:fixed;inset:0;background:rgba(10,15,25,0.75);backdrop-filter:blur(6px);z-index:9999;align-items:center;justify-content:center;padding:1.5rem" onclick="if(event.target===this){this.style.display='none';document.body.style.overflow=''}">
+  <div style="background:#fff;border-radius:20px;max-width:720px;width:100%;max-height:90vh;overflow-y:auto;box-shadow:0 24px 60px rgba(10,15,25,0.25)">
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:1.1rem 1.5rem;border-bottom:1px solid #eee">
+      <span style="font-size:0.95rem;font-weight:700;color:#1a1523">Front-End Web Design — The Hope International Company</span>
+      <button onclick="document.getElementById('modal-hope').style.display='none';document.body.style.overflow=''" style="background:none;border:none;font-size:1.5rem;cursor:pointer;color:#9b92b3;line-height:1">×</button>
+    </div>
+    <div style="padding:1.5rem">
+      <img src="assets/img/cert_hope.png" alt="Hope Certificate" style="width:100%;border-radius:10px;display:block" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <div style="display:none;background:#f3efe9;border:2px dashed #ccc;border-radius:10px;padding:3rem;text-align:center;color:#9b92b3"><p>ضعي صورة الشهادة في:<br><code style="color:#1e3a5f">assets/img/cert_hope.png</code></p></div>
+      <p style="text-align:center;font-size:0.8rem;color:#9b92b3;margin-top:0.75rem;font-weight:500">The Hope International Company · Apr – Jun 2025 · 32 Hours</p>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: CV -->
+<div id="modal-cv" style="display:none;position:fixed;inset:0;background:rgba(10,15,25,0.75);backdrop-filter:blur(6px);z-index:9999;align-items:center;justify-content:center;padding:1.5rem" onclick="if(event.target===this){this.style.display='none';document.body.style.overflow=''}">
+  <div style="background:#fff;border-radius:20px;max-width:800px;width:100%;max-height:92vh;overflow-y:auto;box-shadow:0 24px 60px rgba(10,15,25,0.25)">
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:1.1rem 1.5rem;border-bottom:1px solid #eee">
+      <span style="font-size:0.95rem;font-weight:700;color:#1a1523">Saja Ayyad — Resume</span>
+      <button onclick="document.getElementById('modal-cv').style.display='none';document.body.style.overflow=''" style="background:none;border:none;font-size:1.5rem;cursor:pointer;color:#9b92b3;line-height:1">×</button>
+    </div>
+    <div style="padding:1.5rem">
+      <img src="assets/img/cv_preview.png" alt="CV Preview" style="width:100%;border-radius:10px;display:block;box-shadow:0 4px 20px rgba(0,0,0,0.08)" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <div style="display:none;background:#f3efe9;border:2px dashed #ccc;border-radius:10px;padding:3rem;text-align:center;color:#9b92b3"><p>ضعي صورة الـ CV في:<br><code style="color:#1e3a5f">assets/img/cv_preview.png</code></p></div>
+      <div style="text-align:center;margin-top:1.2rem">
+        <a href="assets/cv/saja_ayyad_cv.pdf" download style="display:inline-flex;align-items:center;gap:0.4rem;background:#1e3a5f;border:none;border-radius:8px;padding:0.6rem 1.3rem;font-size:0.85rem;font-weight:600;color:#fff;cursor:pointer;font-family:sans-serif;text-decoration:none">Download PDF</a>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script>
+// Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach(a=>{
   a.addEventListener('click',e=>{
     const t=document.querySelector(a.getAttribute('href'));
     if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}
   });
 });
-function openModal(id){
-  document.getElementById(id).classList.add('open');
-  document.body.style.overflow='hidden';
-}
-function closeModal(id){
-  document.getElementById(id).classList.remove('open');
-  document.body.style.overflow='';
-}
-function closeModalOutside(e,id){
-  if(e.target===document.getElementById(id)) closeModal(id);
-}
+
+// Escape closes modals
 document.addEventListener('keydown',e=>{
-  if(e.key==='Escape') document.querySelectorAll('.modal-overlay.open').forEach(m=>m.classList.remove('open'));
+  if(e.key==='Escape'){
+    document.querySelectorAll('[id^="modal-"]').forEach(m=>{m.style.display='none'});
+    document.body.style.overflow='';
+  }
 });
+
+// Spotlight cursor
+const spot=document.createElement('div');
+spot.className='spotlight';
+document.body.appendChild(spot);
+document.addEventListener('mousemove',e=>{
+  spot.style.left=e.clientX+'px';
+  spot.style.top=e.clientY+'px';
+  spot.style.opacity='1';
+});
+document.addEventListener('mouseleave',()=>spot.style.opacity='0');
+
+// Scroll reveal
+const revealEls=document.querySelectorAll('.reveal,.reveal-left,.stagger');
+const io=new IntersectionObserver((entries)=>{
+  entries.forEach(el=>{
+    if(el.isIntersecting){el.target.classList.add('visible');io.unobserve(el.target)}
+  });
+},{threshold:0.1});
+revealEls.forEach(el=>io.observe(el));
+
+// 3D card tilt on mouse move
+document.querySelectorAll('.tilt-card').forEach(card=>{
+  card.addEventListener('mousemove',e=>{
+    const r=card.getBoundingClientRect();
+    const x=(e.clientX-r.left)/r.width-0.5;
+    const y=(e.clientY-r.top)/r.height-0.5;
+    card.style.transform=`perspective(600px) rotateY(${x*10}deg) rotateX(${-y*10}deg) translateY(-4px)`;
+    card.style.boxShadow=`${-x*12}px ${y*12}px 24px rgba(30,58,95,0.12)`;
+  });
+  card.addEventListener('mouseleave',()=>{
+    card.style.transform='';
+    card.style.boxShadow='';
+  });
+});
+
+// Typewriter for hero subtitle
+const heroSub=document.querySelector('.hero-sub');
+if(heroSub){
+  const text=heroSub.textContent;
+  heroSub.textContent='';
+  heroSub.style.opacity='1';
+  let i=0;
+  const type=()=>{if(i<text.length){heroSub.textContent+=text[i++];setTimeout(type,18)}};
+  setTimeout(type,600);
+}
+
+// Nav active link highlight on scroll
+const sections=document.querySelectorAll('section[id],[id]');
+const navLinks=document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll',()=>{
+  let cur='';
+  sections.forEach(s=>{if(window.scrollY>=s.offsetTop-120)cur=s.id});
+  navLinks.forEach(a=>{
+    a.style.color=a.getAttribute('href')==='#'+cur?'var(--navy)':'';
+    a.style.fontWeight=a.getAttribute('href')==='#'+cur?'700':'';
+  });
+},{ passive:true });
+
+// Counter animation for stats if any
 </script>
 </body>
 </html>
