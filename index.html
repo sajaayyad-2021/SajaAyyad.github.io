@@ -242,6 +242,79 @@ footer p{font-size:0.8rem;color:var(--text3)}
 .clean-cert-row-name{font-size:0.88rem;font-weight:600;color:var(--text)}
 .clean-cert-row-org{font-size:0.76rem;color:var(--text3)}
 .clean-cert-row-meta{font-size:0.75rem;color:var(--text3);white-space:nowrap;font-weight:500;flex-shrink:0;margin-left:1rem}
+
+/* ── PROFESSIONAL POLISH ── */
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(circle at 15% 15%,rgba(30,58,95,.045),transparent 28%),radial-gradient(circle at 85% 70%,rgba(10,122,94,.035),transparent 30%)}
+.hero{position:relative}
+.hero::before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(30,58,95,.055),transparent 68%);top:50%;right:-190px;transform:translateY(-50%);pointer-events:none;z-index:-1}
+.profile-outer::after{content:"";position:absolute;inset:-18px;border-radius:50%;border:1px solid rgba(10,122,94,.14);animation:spinReverse 28s linear infinite}
+@keyframes spinReverse{from{transform:rotate(360deg)}to{transform:rotate(0)}}
+.profile-frame{position:relative;transition:transform .45s ease,box-shadow .45s ease}
+.profile-frame:hover{transform:scale(1.025);box-shadow:0 18px 55px rgba(30,58,95,.2)}
+.profile-frame::after{content:"";position:absolute;inset:0;border-radius:50%;background:linear-gradient(135deg,rgba(255,255,255,.18),transparent 42%,rgba(10,122,94,.06));pointer-events:none}
+.btn-p,.btn-o{box-shadow:0 5px 18px rgba(30,58,95,.08)}
+.btn-p:hover{box-shadow:0 9px 24px rgba(30,58,95,.18)}
+.skill-row,.cert-card,.project-card,.contact-card,.exp-card{backdrop-filter:blur(8px)}
+.skill-row:hover,.cert-card:hover,.project-card:hover,.contact-card:hover{box-shadow:0 12px 30px rgba(30,58,95,.1)}
+.project-card,.cert-card,.skill-row,.contact-card{will-change:transform}
+.section-glow{position:absolute;pointer-events:none}
+@media(max-width:600px){
+  nav{padding:1rem 1.25rem}
+  .hero{padding-left:1.25rem;padding-right:1.25rem}
+  section{padding-left:1.25rem;padding-right:1.25rem}
+  .alt-bg-inner{padding-left:1.25rem;padding-right:1.25rem}
+  .hero h1{font-size:2.55rem}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+
+/* ── INTERACTIVE PRO POLISH ── */
+html{scroll-padding-top:82px}
+body{background-attachment:fixed}
+body::after{content:"";position:fixed;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,var(--navy),var(--mint));transform-origin:left;transform:scaleX(var(--scroll-progress,0));z-index:2000;box-shadow:0 0 12px rgba(10,122,94,.22);pointer-events:none}
+nav{transition:box-shadow .3s ease,background .3s ease,transform .3s ease}
+nav.scrolled{box-shadow:0 8px 30px rgba(30,58,95,.08);background:rgba(250,248,245,.96)}
+.nav-logo{transition:transform .25s ease}
+.nav-logo:hover{transform:translateY(-1px)}
+.nav-links a.active{color:var(--navy);font-weight:700}
+.nav-links a.active::after{width:100%}
+.hero h1{animation:heroTitle .9s cubic-bezier(.2,.75,.25,1) .15s both}
+@keyframes heroTitle{from{opacity:0;transform:translateY(18px);letter-spacing:-2px}to{opacity:1;transform:none;letter-spacing:-1px}}
+.hero-btns .btn-p,.hero-btns .btn-o{transform:translateZ(0)}
+.btn-p,.btn-o,.cert-btn{isolation:isolate}
+.btn-p::before,.btn-o::before,.cert-btn::before{content:"";position:absolute;width:12px;height:12px;border-radius:50%;background:rgba(255,255,255,.42);transform:scale(0);opacity:0;pointer-events:none}
+.ripple{position:absolute;border-radius:50%;background:rgba(255,255,255,.35);transform:scale(0);animation:ripple .6s ease-out;pointer-events:none}
+@keyframes ripple{to{transform:scale(18);opacity:0}}
+.profile-outer{perspective:800px}
+.profile-frame{transform-style:preserve-3d}
+.profile-frame img{transition:transform .6s cubic-bezier(.2,.7,.2,1);will-change:transform}
+.profile-outer:hover .profile-frame img{transform:scale(1.035)}
+.profile-outer::before{transition:opacity .3s ease}
+.profile-outer:hover::before{opacity:.7}
+.skill-row,.cert-card,.project-card,.contact-card,.exp-card{transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s ease,border-color .25s ease}
+.skill-row:hover{transform:translateX(5px)}
+.project-card::before,.cert-card::after,.contact-card::before,.skill-row::before{content:"";position:absolute;pointer-events:none;opacity:0;transition:opacity .3s ease}
+.project-card{position:relative}
+.project-card::before{inset:0;background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(30,58,95,.07),transparent 42%)}
+.project-card:hover::before{opacity:1}
+.cert-card{position:relative}
+.cert-card::after{top:0;left:0;width:100%;height:2px;background:linear-gradient(90deg,var(--navy),var(--mint),transparent)}
+.cert-card:hover::after{opacity:1}
+.contact-card{position:relative;overflow:hidden}
+.contact-card::before{inset:auto -20% -65% auto;width:110px;height:110px;border-radius:50%;background:var(--mint-dim)}
+.contact-card:hover::before{opacity:1}
+.exp-card::after{content:"";position:absolute;top:0;right:0;width:120px;height:120px;border-radius:0 16px 0 100%;background:radial-gradient(circle at top right,rgba(10,122,94,.08),transparent 68%);pointer-events:none}
+.section-marker{display:inline-flex;align-items:center;gap:.5rem;margin-bottom:.7rem;font-size:.68rem;color:var(--text3);font-weight:700;letter-spacing:1.5px;text-transform:uppercase}
+.section-marker::before{content:"";width:24px;height:1px;background:var(--mint)}
+.back-top{position:fixed;right:22px;bottom:22px;width:42px;height:42px;border:1px solid var(--border2);border-radius:50%;background:rgba(255,255,255,.88);backdrop-filter:blur(10px);color:var(--navy);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:90;opacity:0;visibility:hidden;transform:translateY(12px);transition:all .3s ease;box-shadow:0 8px 24px rgba(30,58,95,.1)}
+.back-top.show{opacity:1;visibility:visible;transform:none}
+.back-top:hover{background:var(--navy);color:#fff;transform:translateY(-3px);box-shadow:0 12px 28px rgba(30,58,95,.18)}
+.back-top svg{width:17px;height:17px}
+@media(max-width:900px){.back-top{right:15px;bottom:15px;width:40px;height:40px}.skill-row:hover{transform:translateY(-2px)}}
+@media(prefers-reduced-motion:reduce){body::after{display:none}.back-top{transition:none}.hero h1{animation:none}}
+
 </style>
 </head>
 <body>
@@ -275,8 +348,7 @@ footer p{font-size:0.8rem;color:var(--text3)}
   <div class="hero-right">
     <div class="profile-outer">
       <div class="profile-frame">
-        
-       
+        <img src="assets/img/b8fc27ec-68e2-4337-8583-358080d6ea09.jpeg" alt="Saja Ayyad — Profile Photo">
           <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
             <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/>
           </svg>
@@ -794,6 +866,78 @@ window.addEventListener('scroll',()=>{
 },{ passive:true });
 
 // Counter animation for stats if any
+
+
+// Scroll progress + elevated navbar + back-to-top
+const nav=document.querySelector('nav');
+const backTop=document.createElement('button');
+backTop.className='back-top';
+backTop.setAttribute('aria-label','Back to top');
+backTop.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>';
+document.body.appendChild(backTop);
+const updateScrollUI=()=>{
+  const max=document.documentElement.scrollHeight-window.innerHeight;
+  const progress=max>0?window.scrollY/max:0;
+  document.documentElement.style.setProperty('--scroll-progress',progress);
+  nav?.classList.toggle('scrolled',window.scrollY>18);
+  backTop.classList.toggle('show',window.scrollY>500);
+};
+window.addEventListener('scroll',updateScrollUI,{passive:true});
+updateScrollUI();
+backTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+// Real click ripple for buttons
+const rippleTargets=document.querySelectorAll('.btn-p,.btn-o,.cert-btn');
+rippleTargets.forEach(btn=>{
+  btn.style.position='relative';
+  btn.addEventListener('click',e=>{
+    const r=btn.getBoundingClientRect();
+    const size=Math.max(r.width,r.height);
+    const ripple=document.createElement('span');
+    ripple.className='ripple';
+    ripple.style.width=size+'px';
+    ripple.style.height=size+'px';
+    ripple.style.left=(e.clientX-r.left-size/2)+'px';
+    ripple.style.top=(e.clientY-r.top-size/2)+'px';
+    btn.appendChild(ripple);
+    ripple.addEventListener('animationend',()=>ripple.remove());
+  });
+});
+
+// Interactive project light follows the pointer
+ document.querySelectorAll('.project-card').forEach(card=>{
+  card.addEventListener('pointermove',e=>{
+    const r=card.getBoundingClientRect();
+    card.style.setProperty('--mx',((e.clientX-r.left)/r.width*100)+'%');
+    card.style.setProperty('--my',((e.clientY-r.top)/r.height*100)+'%');
+  });
+});
+
+// Gentle profile parallax
+const profile=document.querySelector('.profile-outer');
+if(profile && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+  profile.addEventListener('pointermove',e=>{
+    const r=profile.getBoundingClientRect();
+    const x=(e.clientX-r.left)/r.width-.5;
+    const y=(e.clientY-r.top)/r.height-.5;
+    profile.querySelector('.profile-frame').style.transform=`rotateY(${x*5}deg) rotateX(${-y*5}deg) scale(1.025)`;
+  });
+  profile.addEventListener('pointerleave',()=>profile.querySelector('.profile-frame').style.transform='');
+}
+
+// Better active navigation using section visibility
+const navSectionLinks=[...document.querySelectorAll('.nav-links a[href^="#"]')];
+const observedSections=navSectionLinks.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
+const sectionObserver=new IntersectionObserver(entries=>{
+  const visible=entries.filter(e=>e.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];
+  if(!visible)return;
+  navSectionLinks.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+visible.target.id));
+},{rootMargin:'-25% 0px -55% 0px',threshold:[0,.25,.5]});
+observedSections.forEach(s=>sectionObserver.observe(s));
+
+// Add a subtle entrance to the page after fonts/images are ready
+window.addEventListener('load',()=>document.body.classList.add('page-ready'));
+
 </script>
 </body>
-</html>
+</html> In profile img put it assets/img/b8fc27ec-68e2-4337-8583-358080d6ea09.jpeg and. Return whole index If you can make the site look more professional—adding effects that enhance its appearance and presentation—please do so, without altering the information itself.
